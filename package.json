@@ -1,0 +1,25 @@
+{
+  "name": "yamhill",
+  "description": "An async function memoization library that also limits cache-key specific concurrency to 1",
+  "version": "1.0.5",
+  "author": "John P. Simons",
+  "keywords": [
+    "memoize",
+    "cache",
+    "async"
+  ],
+  "main": "index.js",
+  "repository": "github:johnnysprinkles/yamhill",
+  "license": "MIT",
+  "dependencies": {
+    "lru-cache": "^5.1.1"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "eslint": "^6.8.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint index.js"
+  }
+}
