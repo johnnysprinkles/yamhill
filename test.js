@@ -73,15 +73,15 @@ describe('yamhill', () => {
   });
 
   describe('with multiple keys', () => {
-    let options = { keyFn: args => args[0] };
+    let options = { keyFn: (arg) => arg };
 
     test('different keys', async () => {
       let fn = jest.fn(fastAsyncFn);
       let mem = yamhill.memoize(fn, options);
-      let result1 = await mem('a');
-      let result2 = await mem('b');
-      let result3 = await mem('a');
-      let result4 = await mem('b');
+      let result1 = await mem('aardvark');
+      let result2 = await mem('aligator');
+      let result3 = await mem('aardvark');
+      let result4 = await mem('aligator');
       expect(fn).toHaveBeenCalledTimes(2);
     });
 
@@ -89,7 +89,7 @@ describe('yamhill', () => {
 
   describe('with cache overflow', () => {
     let options = {
-      keyFn: args => args[0],
+      keyFn: (arg) => arg,
       maxItems: 1,
     };
 

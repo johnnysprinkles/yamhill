@@ -1,7 +1,7 @@
 {
   "name": "yamhill",
   "description": "An async function memoization library that also limits cache-key specific concurrency to 1",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "author": "John P. Simons",
   "keywords": [
     "memoize",

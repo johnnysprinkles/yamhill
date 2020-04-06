@@ -31,7 +31,7 @@ module.exports = {
     };
 
     return async function(...args) {
-      let key = keyFn ? keyFn(args) : 'SINGLETON';
+      let key = keyFn ? keyFn(...args) : 'SINGLETON';
       let wrapper = cache.get(key);
 
       if (wrapper) {

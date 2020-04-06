@@ -83,7 +83,7 @@ If it ends up rejecting, all the requests waiting on it also reject.
   if you fetch a value and it's within 10 seconds of being expired, kick off
   a new call.
 * `maxItems`: How many items to keep in the LRU cache. Defaults to 100.
-* `keyFn`: A function that takes an array of arguments and returns a string,
+* `keyFn`: A function that takes the arguments and returns a string,
   used as the cache key. Defaults to undefined, which is fine for when your
   async function is parameterless.
 
